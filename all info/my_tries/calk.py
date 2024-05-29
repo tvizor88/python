@@ -32,5 +32,4 @@ def calculator():
             print("An error occurred:", e)
 
 
-# Run the calculator
 calculator()
