@@ -1,0 +1,15 @@
+#beautifulsoup4 # Without version specifier
+#docopt == 0.6.1 # Version Matching. Must be version 0.6.1
+#keyring >= 4.1.1 # Minimum version 4.1.1
+#coverage != 3.5 # Version Exclusion. Anything except version 3.5
+#pip install -r requirements.txt need to run from file location
+pycodestyle #pycodestyle .py
+flake8 #flake8 .py
+black #black .py  or  black --line-length=79 .py
+ruff #ruff check .py  or  ruff check --fix .py  or  ruff format .py
+#turtle
+requests
+
+
+
+
