@@ -164,7 +164,7 @@ def remove_duplicates(input_string):
     for char in input_string:
         if char not in seen:
             seen += char
-            res += char  
+            res += char
     return res
 
 
