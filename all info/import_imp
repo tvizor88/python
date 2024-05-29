@@ -1,0 +1,10 @@
+>>> import math
+>>> dir()
+['__annotations__', '__builtins__', ..., 'math']
+
+>>> dir(math)
+['__doc__', ..., 'nan', 'pi', 'pow', ...]
+
+from . import greece
+from . import norway
+from world import africa

@@ -1,0 +1,57 @@
+Methods	Description
+upper() 	Converts the string to uppercase
+lower()	Converts the string to lowercase
+partition()	Returns a tuple
+replace()	Replaces substring inside
+find()	Returns the index of the first occurrence of substring
+rstrip()	Removes trailing characters
+split()	Splits string from left
+startswith()	Checks if string starts with the specified string
+isnumeric()	Checks numeric characters
+index()	Returns index of substring
+
+•  capitalize() - преобразует первый символ строки в верхний регистр.
+•  casefold() - преобразует все символы строки в нижний регистр для безрегистрового сравнения.
+•  center(width[, fillchar]) - возвращает отцентрированную строку, заполненную символом fillchar.
+•  count(sub[, start[, end]]) - возвращает количество вхождений подстроки sub в диапазоне [start, end].
+•  encode(encoding="utf-8", errors="strict") - кодирует строку в байты.
+•  endswith(suffix[, start[, end]]) - возвращает True, если строка заканчивается на suffix.
+•  expandtabs(tabsize=8) - заменяет табуляцию на пробелы.
+•  find(sub[, start[, end]]) - возвращает наименьший индекс в строке, где найдена подстрока sub.
+•  format(*args, **kwargs) - форматирует строку.
+•  index(sub[, start[, end]]) - похож на find(), но вызывает ValueError, если sub не найдена.
+•  isalnum() - возвращает True, если все символы в строке являются буквенно-цифровыми.
+•  isalpha() - возвращает True, если все символы в строке являются буквами.
+•  isdecimal() - возвращает True, если все символы в строке являются десятичными числами.
+•  isdigit() - возвращает True, если все символы в строке являются цифрами.
+•  isidentifier() - возвращает True, если строка является допустимым идентификатором.
+•  islower() - возвращает True, если все символы в строке в нижнем регистре.
+•  isnumeric() - возвращает True, если все символы в строке являются числовыми.
+•  isspace() - возвращает True, если все символы в строке являются пробельными.
+•  istitle() - возвращает True, если строка является заголовком.
+•  isupper() - возвращает True, если все символы в строке в верхнем регистре.
+•  join(iterable) - соединяет элементы iterable, используя строку как разделитель.
+•  ljust(width[, fillchar]) - возвращает строку, выровненную влево, заполненную символом fillchar.
+•  lower() - преобразует все символы строки в нижний регистр.
+•  lstrip([chars]) - удаляет пробельные символы в начале строки.
+•  partition(sep) - разбивает строку на три части, используя sep как разделитель.
+•  replace(old, new[, count]) - заменяет все вхождения old на new.
+•  rfind(sub[, start[, end]]) - возвращает наибольший индекс в строке, где найдена подстрока sub.
+•  rindex(sub[, start[, end]]) - похож на rfind(), но вызывает ValueError, если sub не найдена.
+•  rjust(width[, fillchar]) - возвращает строку, выровненную вправо, заполненную символом fillchar.
+•  rpartition(sep) - похож на partition(), но ищет sep с конца строки.
+•  rsplit(sep=None, maxsplit=-1) - разбивает строку на список, начиная с конца.
+•  rstrip([chars]) - удаляет пробельные символы в конце строки.
+•  split(sep=None, maxsplit=-1) - разбивает строку на список по sep.
+•  splitlines([keepends]) - разбивает строку на список строк по символам новой строки.
+•  startswith(prefix[, start[, end]]) - возвращает True, если строка начинается с prefix.
+•  strip([chars]) - удаляет пробельные символы в начале и в конце строки.
+•  swapcase() - меняет регистр всех символов в строке.
+•  title() - преобразует первый символ каждого слова в верхний регистр.
+•  translate(table) - заменяет символы в строке согласно table.
+•  upper() - преобразует все символы строки в верхний регистр.
+•  zfill(width) - добавляет нули в начало строки, пока ее длина не станет равной width.
+
+greet = 'Hello'
+# access character from 1st index to 3rd index
+print(greet[1:4])  # "ell"

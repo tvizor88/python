@@ -1,0 +1,25 @@
+Python:
+https://www.python.org/downloads/
+After installation, open command-line and run “python --version”:
+
+IDE
+Download and install PyCharm IDE (Community version):
+https://www.jetbrains.com/pycharm/download/#section=windows
+
+pip install "SomePackage"
+pip install -r requirements.txt
+requirements = all addons for pychar
+
+Documentation:
+Python documentation: https://docs.python.org/3/
+Python code style guide: https://peps.python.org/pep-0008/, https://realpython.com/python-pep8/
+
+Modules and imports
+https://www.w3schools.com/python/python_modules.asp
+https://blog.cloudboost.io/python-import-from-as-cheatsheet-tutorial-example-beginner-helpmodule-function-def-5f03b02a1dbe
+https://www.datacamp.com/tutorial/modules-in-python
+
+Advanced:
+https://realpython.com/python-import/
+
+

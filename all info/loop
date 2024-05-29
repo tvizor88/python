@@ -1,0 +1,104 @@
+
+iterating through greet string
+for letter in greet:
+    print(letter)
+
+
+n = 4
+for i in range(0, n):
+    print(i)
+
+
+greet = 'Hello'
+# iterating through greet string
+for letter in greet:
+    print(letter)
+
+
+greet = 'Hello'
+
+# count length of greet string
+print(len(greet))
+# Output: 5
+
+
+# escape double quotes
+example = "He said, \"What's there?\""
+# escape single quotes
+example = 'He said, "What\'s there?"'
+print(example)
+# Output: He said, "What's there?"
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+
+if a > b: print("a is greater than b")
+
+print("A") if a > b else print("B")
+
+print("A") if a > b else print("=") if a == b else print("B")
+
+
+while
+
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break
+
+# Prints out only odd numbers - 1,3,5,7,9
+for x in range(10):
+    # Check if x is even
+    if x % 2 == 0:
+        continue
+    print(x)
+
+
+    count=0
+while(count<5):
+    print(count)
+    count +=1
+else:
+    print("count value reached %d" %(count))
+
+
+
+# your code goes here
+for number in numbers:
+    if number == 237:
+        break
+    if number % 2 == 1:
+        continue
+    print(number)
+
+
+    for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        continue
+    print('Current Letter :', letter)
+
+
+    for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        break
+print('Current Letter :', letter)
+
+
+fruits = ["apple", "orange", "kiwi"]
+iter_obj = iter(fruits)
+while True:
+    try:
+        fruit = next(iter_obj)
+        print(fruit)
+    except StopIteration:
+        break
+
