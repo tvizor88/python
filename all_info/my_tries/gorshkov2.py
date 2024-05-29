@@ -34,6 +34,17 @@ print(count_even_numbers([2, 2, 0]))  # print the result
 print(count_even_numbers([1, 3, 5]))  # print the result
 print('______________________')  # separate tasks results
 
+
+def one_more_count(nums):
+    summ = 0
+    for num in nums:
+        if num % 2 == 0:
+            summ += 1
+    return summ
+
+
+print(one_more_count([2, 1, 2, 3, 4]))
+
 """
 Remove all the occurrences of an element from a list and print resulting list
 1, [1, 1, 2, 3, 4, 5, 1, 2] -> [2, 3, 4, 5, 2]
