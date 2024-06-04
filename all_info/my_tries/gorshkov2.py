@@ -62,6 +62,7 @@ print(remove_element(7, [5, 6, 7, 8, 9, 10, 7]))  # print reformated array
 print(remove_element(4, [1, 2, 3]))  # print reformated array
 print('______________________')  # separate tasks results
 
+
 """
 Given list of Strings, your task is to add a space before sequence which 
 begins with capital letters to make separate words.
