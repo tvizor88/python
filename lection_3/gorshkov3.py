@@ -184,7 +184,7 @@ print("task 7 _______________________________")
 def iterator():
     while True:
         try:
-            print("enter any positive number or print exit")
+            print("enter any positive number or print EXIT")
             operation = input()
             count = 0
             if operation == "exit":
@@ -199,8 +199,8 @@ def iterator():
                     count += 1
                     length_of_number = len(operation)
                 print("iteration count =", count)
-        except Exception as e:
-            print("Ошибка:", e)
+        except Exception:
+            print("inputted value is not a number")
 
 
 iterator()
