@@ -1,11 +1,11 @@
 def add_space(s):
-    new_string = ''
+    new_str = ''
     for char in s:
         if char.isupper():
-            new_string += ' ' + char
+            new_str += ' ' + char
         else:
-            new_string += char
-    return new_string
+            new_str += char
+    return new_str
 
 strings = [
 "everyOne",

@@ -1,6 +1,7 @@
 import string
 import secrets
-
+import csv
+import json
 """
 1. There are two lists, possibly of different lengths.
 The first one consists of keys, the second one consists of values.
@@ -21,7 +22,7 @@ first solution
 """
 
 
-print("task 1 dictionary_____________________")
+print("task 1 dictionary from 2 lists____done")
 print('task one first option without function')
 diction = {}
 keys = ['a', 'b', 'c', 'd']
@@ -86,7 +87,7 @@ Note: to unpack range to list use the asterisk character (*)
 """
 
 
-print("task 2 odd numbers____________________")
+print("task 2 odd numbers________________done")
 odd_numbers = [*range(1, 16, 2)]
 print(odd_numbers)
 
@@ -101,7 +102,7 @@ Create different solutions:
 """
 
 
-print("task 3 loop___________________________")
+print("task 3 numbers from list loop_____done")
 
 
 def list_filtering(input_list):
@@ -131,7 +132,7 @@ It must contain at least 2 upper case letters, 1 digit, and 1 special symbol.
 """
 
 
-print("task 4 code generator_________________")
+print("task 4 code generator_____________done")
 alphabet = string.ascii_letters + string.digits + string.punctuation
 while True:
     password = ''.join(secrets.choice(alphabet) for i in range(10))
@@ -150,8 +151,23 @@ Notes:
 """
 
 
-print("task 5 _______________________________")
+print("task 5 preparing JSON from CSV____done")
 
+
+csv_file_path = 'D:\python\project\python\lection_3\cars.csv'
+json_list = []
+
+
+with open(csv_file_path, mode='r', encoding='utf-8') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        json_list.append(row)
+
+
+with open('output.json', mode='w', encoding='utf-8') as jsonfile:
+    json.dump(json_list, jsonfile, ensure_ascii=False, indent=2)
+
+print("check 'output.json' file")
 
 """
 6. Write a primitive calculator. User input is assumed to be a formula (in string format) 
@@ -166,7 +182,7 @@ If the input is valid, perform the calculation and print out the result.
 """
 
 
-print("task 6 _______________________________")
+print("task 6 calculator         ____________")
 
 
 """
@@ -178,7 +194,7 @@ which is the number of times you must multiply the digits in num until you reach
 """
 
 
-print("task 7 _______________________________")
+print("task 7 iterator till one symbol___done")
 
 
 def iterator():
@@ -212,4 +228,4 @@ Notes:
 - use functools.wraps
 - use round() to round time to milliseconds. round(0.6666666, 3) -> 0.667
 """
-print("task 8 _______________________________")
+print("task 8 decorator______________________")
