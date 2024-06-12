@@ -55,7 +55,6 @@ print("task one 2-nd option with function")
 
 def create_dict(keys1, values1):
     diction1 = {}
-    i = 0
     if len(keys1) > len(values1):
         for key in keys1:
             i = keys.index(key)
@@ -136,9 +135,9 @@ print("task 4 code generator_____________done")
 alphabet = string.ascii_letters + string.digits + string.punctuation
 while True:
     password = ''.join(secrets.choice(alphabet) for i in range(10))
-    if (sum(c.isupper() for c in password) >= 2
-            and sum(c.isdigit() for c in password) >= 1
-            and sum(not c.isalnum() for c in password) >= 1):
+    if (sum(character.isupper() for character in password) >= 2
+            and sum(character.isdigit() for character in password) >= 1
+            and sum(not character.isalnum() for character in password) >= 1):
         print(password)
         break
 
@@ -154,7 +153,7 @@ Notes:
 print("task 5 preparing JSON from CSV____done")
 
 
-csv_file_path = 'D:\python\project\python\lection_3\cars.csv'
+csv_file_path = 'D:\\python\\project\\python\\lection_3\\cars.csv'
 json_list = []
 
 
@@ -182,7 +181,7 @@ If the input is valid, perform the calculation and print out the result.
 """
 
 
-print("task 6 calculator         ________DONE")
+print("task 6 calculator_________________DONE")
 
 
 def calculator():
@@ -192,8 +191,6 @@ def calculator():
         operation = input()
         if operation == 'exit':
             break
-        else:
-            print("ok")
         formula = operation.split()
         if (len(formula) == 3 and formula[0].isdigit()
                 and formula[2].isdigit() and
@@ -243,10 +240,10 @@ def iterator():
             elif operation.isdigit():
                 # print("number is correct")
                 length_of_number = len(operation)
-                print("length", length_of_number)
+                # print("length", length_of_number)
                 while length_of_number > 1:
                     operation = str(sum(map(int, operation)))
-                    print(operation)
+                    # print(operation)
                     count += 1
                     length_of_number = len(operation)
                 print("iteration count =", count)
