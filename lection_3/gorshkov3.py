@@ -28,8 +28,8 @@ print("task 1 dictionary from 2 lists____done")
 print('task one first option without function')
 diction = {}
 keys = ['a', 'b', 'c', 'd']
-# values = [1, 2, 3, 4, 5, 6]
-values = [1, 2, 3]
+values = [1, 2, 3, 4, 5, 6]
+# values = [1, 2, 3]
 if len(keys) > len(values):
     for key in keys:
         i = keys.index(key)
@@ -213,8 +213,7 @@ print("task 6 calculator_________________DONE")
 
 def calculator():
     while True:
-        print("""Введите первый операнд, математическое действие
-         и второй операнд (22 + 22) или 'exit' для выхода:""")
+        print("""input operand math action amd second operand (22 + 22) or 'exit' to exit""")
         operation = input()
         if operation == 'exit':
             break
@@ -225,7 +224,7 @@ def calculator():
             num1 = int(formula[0])
             num2 = int(formula[2])
             operator = formula[1]
-            # assert operator == "/" and num2 != 0, "при делении второй аргумент не может быть 0."
+            # assert operator == "/" and num2 != 0, "2-тв argument couldn't be 0"
             if operator == '+':
                 result = num1 + num2
             elif operator == '-':
@@ -236,11 +235,11 @@ def calculator():
                 try:
                     result = num1 / num2
                 except ZeroDivisionError:
-                    print('Ошибка: Деление на ноль')
+                    print('error 0 devide')
                     continue
-            print(f"Результат: {result}")
+            print(f"result: {result}")
         else:
-            print("Неправильный ввод. Пожалуйста, введите данные в формате '22 + 22'.")
+            print("wrong input, should be e.g. '22 + 22'.")
 
 
 calculator()

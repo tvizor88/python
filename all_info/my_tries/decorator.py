@@ -15,6 +15,7 @@ def outer():
                     and sum(c.isdigit() for c in password) >= 1
                     and sum(not c.isalnum() for c in password) >= 1):
                 print(password)
+                time.sleep(5)
                 break
         end_time = time.time()
         print(end_time)
