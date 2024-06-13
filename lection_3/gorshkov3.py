@@ -2,6 +2,8 @@ import string
 import secrets
 import csv
 import json
+import random
+
 """
 1. There are two lists, possibly of different lengths.
 The first one consists of keys, the second one consists of values.
@@ -123,7 +125,13 @@ print("output list", filtered_elements)
 
 print("task 3 list comprehensions____________")
 
-print("task 3 filter() + lambda______________")
+print("task 3 filter() + lambda__________DONE")
+el = [1, 2, '3', 4, None, 10, 33, 'Python', -37.5]
+is_int = lambda x: type(x) == int
+filtered_list = list(filter(is_int, el))
+# filtered_list = list(filter(lambda x: type(x) is int, el)) # the same in one row
+print(filtered_list)
+
 """
 4. Generate a random Password which meets the following conditions:
 Password length must be 10 characters long.
@@ -141,7 +149,26 @@ while True:
         print(password)
         break
 
+print("task 4 with random code generator_done")
 
+
+def generate_password():
+    letters = string.ascii_letters
+    digits = string.digits
+    special_chars = string.punctuation
+    password = ([random.choice(letters.upper()) for l in range(2)] +
+                [random.choice(digits) for d in range(1)] + [random.choice(special_chars) for s in range(1)])
+    # random_letters = random.sample(letters.upper(), k=2) + random.sample(digits, k=1) + random.sample(special_chars, k=1)
+    # print(random_letters)
+    while len(password) < 10:
+        password.append(random.choice(letters + digits + special_chars))
+        # print(password)
+    random.shuffle(password)
+    # print(password)
+    return ''.join(password)
+
+
+print(generate_password())
 """
 5. Read cars.csv file, convert its content into json format and write it into cars.json file.
 Notes: 
@@ -198,6 +225,7 @@ def calculator():
             num1 = int(formula[0])
             num2 = int(formula[2])
             operator = formula[1]
+            # assert operator == "/" and num2 != 0, "при делении второй аргумент не может быть 0."
             if operator == '+':
                 result = num1 + num2
             elif operator == '-':
@@ -209,9 +237,10 @@ def calculator():
                     result = num1 / num2
                 except ZeroDivisionError:
                     print('Ошибка: Деление на ноль')
+                    continue
             print(f"Результат: {result}")
         else:
-            print('Неправильная формула')
+            print("Неправильный ввод. Пожалуйста, введите данные в формате '22 + 22'.")
 
 
 calculator()
