@@ -1,7 +1,9 @@
-import string
 import secrets
 import csv
 import json
+from functools import wraps
+import time
+import string
 import random
 
 """
@@ -123,12 +125,20 @@ filtered_elements = list_filtering(elements)
 print("output list", filtered_elements)
 
 
-print("task 3 list comprehensions____________")
+print("task 3 list comprehensions________DONE")
+
+
+def filter_integers(input_list):
+    return [x for x in input_list if isinstance(x, int)]
+input_list = [1, 2, '3', 4, None, 10, 33, 'Python', -37.5]
+filtered_list = filter_integers(input_list)
+print(filtered_list)
+
 
 print("task 3 filter() + lambda__________DONE")
 el = [1, 2, '3', 4, None, 10, 33, 'Python', -37.5]
-is_int = lambda x: type(x) == int
-filtered_list = list(filter(is_int, el))
+reform_int = lambda x: type(x) == int
+filtered_list = list(filter(reform_int, el))
 # filtered_list = list(filter(lambda x: type(x) is int, el)) # the same in one row
 print(filtered_list)
 
@@ -158,7 +168,8 @@ def generate_password():
     special_chars = string.punctuation
     password = ([random.choice(letters.upper()) for l in range(2)] +
                 [random.choice(digits) for d in range(1)] + [random.choice(special_chars) for s in range(1)])
-    # random_letters = random.sample(letters.upper(), k=2) + random.sample(digits, k=1) + random.sample(special_chars, k=1)
+    # random_letters = random.sample(letters.upper(), k=2) + random.sample(digits, k=1)
+    # + random.sample(special_chars, k=1)
     # print(random_letters)
     while len(password) < 10:
         password.append(random.choice(letters + digits + special_chars))
@@ -288,4 +299,33 @@ Notes:
 - use functools.wraps
 - use round() to round time to milliseconds. round(0.6666666, 3) -> 0.667
 """
-print("task 8 decorator______________________")
+print("task 8 decorator__________________DONE")
+
+
+def execution_time(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        full_time = end_time - start_time
+        return result, full_time
+    return wrapper
+
+
+@execution_time
+def generate_password():
+    letters, digits, special_chars = (string.ascii_letters, string.digits, string.punctuation)
+    pas = ([random.choice(letters.upper()) for l in range(2)] +
+           [random.choice(digits) for d in range(1)] + [random.choice(special_chars) for s in range(1)])
+    while len(pas) < 10:
+        pas.append(random.choice(letters + digits + special_chars))
+    random.shuffle(pas)
+    time.sleep(1.005)
+    return ''.join(pas)
+
+
+password, time_spent = generate_password()
+print(f"Generated pass: {password}")
+print("time spent for pass generation:", round(time_spent, 3))
+

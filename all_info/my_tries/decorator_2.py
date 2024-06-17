@@ -13,4 +13,4 @@ def hello():
 if __name__ == "__main__":
     speech = decorator_func(hello)
     speech()
-    hello()
+    # hello()
